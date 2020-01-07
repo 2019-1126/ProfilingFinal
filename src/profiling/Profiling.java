@@ -45,6 +45,7 @@ public class Profiling {
     }
 
     public void ProfileEnter() {
+        int profilenum = 1;
         Continue:
         while (true) {
             System.out.println("-----------------------------");
@@ -66,7 +67,7 @@ public class Profiling {
             boolean unsabuhaton = true;
             buhaton:
             while (unsabuhaton) {
-                
+
                 System.out.println("-----------------------------");
                 System.out.println("What do you want to do next?");
                 System.out.println("1. Add another profile.");
@@ -85,29 +86,29 @@ public class Profiling {
                         for (int i = 0; i < names.length; i++) {
 
                             if (namessearch.equals(names[i])) {
-                                while (namessearch.equals(names[i])){
-                                System.out.println("-----------------------------");
-                                System.out.println("Name: " + names[i]);
-                                System.out.println("Email: " + email[i]);
-                                System.out.println("Password: " + password[i]);
-                                System.out.println("Password: " + number[i]);
-                                System.out.println("Age: " + age[i]);
-                                System.out.println("-----------------------------");
-                                continue buhaton;
-                            }}
+                                while (namessearch.equals(names[i])) {
+                                    System.out.println("-----------------------------");
+                                    System.out.println("Name: " + names[i]);
+                                    System.out.println("Age: " + age[i]);
+                                    System.out.println("Email: " + email[i]);;
+                                    System.out.println("Number: " + number[i]);
+                                    System.out.println("-----------------------------");
+                                    continue buhaton;
+                                }
+                            }
                         }
                     case 3:
-            for (int j = 0; j < names.length-deductor; j++) {
-                
-                System.out.println("Profile No. "+j+"\n");
-                
-                System.out.println("Name: "+names[j]);
-                System.out.println("Email: " + email[j]);
-                System.out.println("Password: " + password[j]);
-                System.out.println("Age: " + age[j]);
-                System.out.println("\n");
-                continue buhaton;
-            }
+                        for (int j = 0; j < names.length - deductor; j++) {
+                            System.out.println("-----------------------------");
+                            System.out.println("Profile No. " + profilenum++ + "\n");
+
+                            System.out.println("Name: " + names[j]);
+                            System.out.println("Age: " + age[j]);
+                            System.out.println("Email: " + email[j]);
+                            System.out.println("Password: " + number[j]);
+                            System.out.println("-----------------------------");
+                        }
+                        continue buhaton;
                     case 4:
                         System.exit(0);
                 }
