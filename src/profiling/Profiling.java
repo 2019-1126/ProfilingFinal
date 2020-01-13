@@ -97,6 +97,9 @@ public class Profiling {
                                 }
                             }
                         }
+                        System.out.println("-----------------------------");
+                        System.out.println("Profile not found");
+                        continue buhaton;
                     case 3:
                         for (int j = 0; j < names.length - deductor; j++) {
                             System.out.println("-----------------------------");
